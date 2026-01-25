@@ -9,6 +9,7 @@ import cn.xylin.skiprewardad.hook.FusionAdHook;
 import cn.xylin.skiprewardad.hook.GdtAdHook1;
 import cn.xylin.skiprewardad.hook.GdtAdHook2;
 import cn.xylin.skiprewardad.hook.GoogleAdHook1;
+import cn.xylin.skiprewardad.hook.GoogleAdHook2;
 import cn.xylin.skiprewardad.hook.KsAdHook;
 import cn.xylin.skiprewardad.hook.MintegralAdHook;
 import cn.xylin.skiprewardad.hook.SigmobAdHook;
@@ -52,7 +53,9 @@ public class Start implements IXposedHookLoadPackage {
         new UnityAdHook2(baseContext);
         new KsAdHook(baseContext);
         new VungleAdHook(baseContext);
-        new GoogleAdHook1(baseContext);
+        // Disabled: old public API hook may interfere with the new internal GMS hook
+        // new GoogleAdHook1(baseContext);
+        new GoogleAdHook2(baseContext);
         new ApplovinAdHook(baseContext);
     }
 }

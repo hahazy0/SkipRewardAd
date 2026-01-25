@@ -3,7 +3,8 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace 'cn.xylin.skiprewardad'
+    compileSdk 34
     defaultConfig {
         applicationId "cn.xylin.skiprewardad"
         minSdk 21
